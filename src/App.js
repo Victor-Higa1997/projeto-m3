@@ -1,5 +1,5 @@
 import './App.css';
-import { TelaPrincipal } from './components/nav/TelaPrincipal';
+import { TelaPrincipal } from './components/mainScreen/MainScreen';
 
 function App() {
   return (

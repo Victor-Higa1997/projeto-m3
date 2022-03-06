@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { FetchAllProducts } from "../../services"
-import { Aside, ButtonMobile, ButtonToCharge, DCustomSelect, DivCardBox, DivChk, DivColors, DivOption, DivOptionSize, DivOrd, DivPrice, DivSize, Footer, ImgLogo, ImgSacola, Input, Label, Main, NavMenu, OptionOrd, PAll, PDetail, PTittle, Section, SelectOrd } from "../../styles/Nav.style"
+import { Aside, ButtonMobile, ButtonToCharge, DCustomSelect, DivCardBox, DivChk, DivColors, DivOption, DivOptionSize, DivOrd, DivPrice, DivSize, Footer, ImgLogo, ImgSacola, Input, Label, Main, NavMenu, OptionOrd, PAll, PDetail, PTittle, Section, SelectOrd } from "../../styles/MainScreen.style"
 import { Card } from "../card/Card"
 
 export const TelaPrincipal = () => {

@@ -27,7 +27,6 @@ export const ImgSacola = styled.image`
 export const DivCardBox = styled.div`
     height: auto;
     width: 58%;
-    /* border: 0.1rem solid black; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +46,6 @@ export const Section = styled.section`
 export const DivOrd = styled.section`
     width: 100%;
     height: 80px;
-    /* border: 0.1rem solid black; */
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -115,16 +113,17 @@ export const Main = styled.main`
 export const Aside = styled.aside`
     height: auto;
     width: 200px;
-    /* border: 0.1rem solid black; */
     margin-left: 10%;
     @media(max-width: 600px) {
         display: none;
     }
 `
 export const DivColors = styled.div`
-    height: 200px;
+    height: 170px;
     width: 150px;
-    /* border: 0.1rem solid black; */
+    @media(max-width: 600px) {
+        display: ${props => !props.color ? 'none' : 'inline'};
+    }    
 `
 export const PTittle = styled.p`
     font-family: Open Sans;
@@ -164,9 +163,11 @@ export const PAll = styled.p`
     cursor: pointer;
 `
 export const DivSize = styled.div`
-    height: 175px;
+    height: 165px;
     width: 170px;
-    /* border: 0.1rem solid black; */
+    @media(max-width: 600px) {
+        display: ${props => !props.size ? 'none' : 'block'};
+    }    
 `
 export const DivOption = styled.div`
     display: flex;
@@ -195,9 +196,11 @@ export const DivOptionSize = styled.div`
     }
 `
 export const DivPrice = styled.div`
-    height: 175px;
+    height: 165px;
     width: 170px;
-    /* border: 0.1rem solid black; */
+    @media(max-width: 600px) {
+        display: ${props => !props.price ? 'none' : 'inline'};
+    }    
 `
 export const ButtonToCharge = styled.div`
     display: flex;
@@ -250,4 +253,83 @@ export const ButtonMobile = styled.button`
         line-height: 33px;
     }
     
+`
+
+export const Modal = styled.div`
+    display: none;
+    @media(max-width: 600px) {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        position: fixed;
+        display: ${props => !props.modal ? 'none' : 'inline'};
+    }    
+`
+export const ModalFilter = styled.div`
+    display: none;
+    @media(max-width: 600px) {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        position: fixed;
+        display: ${props => !props.modalFilter ? 'none' : 'inline'};
+    }
+`
+export const DivTittleModal = styled.div`
+    width: 100%;
+    height: 50px;
+    border-bottom: 0.1rem solid #C7C7C7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`
+export const PTittleModal = styled.p`
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 38px;
+    text-transform: uppercase;
+    margin:  0 8%;
+`
+export const PCloseModal = styled.p`
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 38px;
+    text-transform: uppercase;
+    margin:  0 8%;
+`
+export const ButtonOrderModal = styled.div`
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+    margin: 30px 0 0 16px;    
+`
+export const DivFilter = styled.div`
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 19px;
+`
+export const ButtonFilterModal = styled.div`
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 33px;
+    color: #666666;
+    margin:  0 8%;
+`
+
+export const DivFilterModal = styled.div`
+    padding: 0px 0px 0px 8%;
+    height: auto;
 `
