@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { FetchAllProducts } from "../../services"
-import { Aside, ButtonFilterModal, ButtonMobile, ButtonOrderModal, ButtonToCharge, DCustomSelect, DivCardBox, DivChk, DivColors, DivFilter, DivFilterModal, DivOption, DivOptionSize, DivOrd, DivPrice, DivSize, DivTittleModal, Footer, ImgLogo, ImgSacola, Input, Label, Main, Modal, ModalFilter, ModalOrder, NavMenu, OptionOrd, PAll, PCloseModal, PDetail, PTittle, PTittleModal, Section, SelectOrd } from "../../styles/MainScreen.style"
+import { Aside, ButtonFilterModal, ButtonMobile, ButtonModalAplicar, ButtonModalLimpar, ButtonOrderModal, ButtonToCharge, DCustomSelect, DivBModal, DivCardBox, DivChk, DivColors, DivFilter, DivFilterModal, DivOption, DivOptionSize, DivOrd, DivPrice, DivSize, DivTittleModal, Footer, ImgLogo, ImgSacola, Input, Label, Main, Modal, ModalFilter, ModalOrder, NavMenu, OptionOrd, PAll, PCloseModal, PDetail, PTittle, PTittleModal, Section, SelectOrd } from "../../styles/MainScreen.style"
 import { Card } from "../card/Card"
 
 export const TelaPrincipal = () => {
@@ -12,19 +12,29 @@ export const TelaPrincipal = () => {
     const [buttonModalColor, setButtonModalColor] = useState(false)
     const [buttonModalSize, setButtonModalSize] = useState(false)
     const [buttonModalPrice, setButtonModalPrice] = useState(false)
-
+    const [buttonFilter, setButtonFilter] = useState(false)
+    
     useEffect(() => {
         (async () => {
             const data = await FetchAllProducts()
 
             pagRef.current = data
             setProducts(pagRef.current.slice(pagRef.current, 9))
+
         })()
     }, [])
 
     useEffect(() => {
         setProducts(fetchPage(pagRef.current, products.length + 3))
     }, [pagina])
+
+    useEffect(()=>{
+        if((buttonModalColor === true) || (buttonModalSize === true) || (buttonModalPrice === true)){
+            setButtonFilter(true)
+        }else{
+            setButtonFilter(false)
+        }
+    })
 
 
     const fetchPage = (array, theAmount) => {
@@ -110,7 +120,7 @@ export const TelaPrincipal = () => {
                         setButtonModalPrice(true) : setButtonModalPrice(false)}>V</ButtonFilterModal>
                 </DivFilter>
                 <DivFilterModal>
-                    
+
                     <DivPrice price={buttonModalPrice}>
                         <DivChk>
                             <Input id="laranja" />
@@ -134,6 +144,10 @@ export const TelaPrincipal = () => {
                         </DivChk>
                     </DivPrice>
                 </DivFilterModal>
+                <DivBModal visible={buttonFilter}>
+                    <ButtonModalAplicar>Aplicar</ButtonModalAplicar>
+                    <ButtonModalLimpar>Limpar</ButtonModalLimpar>
+                </DivBModal>
             </ModalFilter>
 
 

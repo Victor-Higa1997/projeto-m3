@@ -300,6 +300,7 @@ export const PCloseModal = styled.p`
     line-height: 38px;
     text-transform: uppercase;
     margin:  0 8%;
+    
 `
 export const ButtonOrderModal = styled.div`
     font-family: Open Sans;
@@ -332,4 +333,49 @@ export const ButtonFilterModal = styled.div`
 export const DivFilterModal = styled.div`
     padding: 0px 0px 0px 8%;
     height: auto;
+`
+export const DivBModal = styled.div`
+    display: none;
+    @media(max-width: 600px) {
+        display: ${props => !props.visible ? 'none' : 'flex'};
+        width: auto;
+        height: auto;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 25px;
+    }
+`
+export const ButtonModalAplicar = styled.div`
+    width: 180px;
+    height: 35px;
+    left: 16px;
+    top: 885px;
+    background: #00C0EE;
+    margin-left: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #FFFFFF;
+`
+export const ButtonModalLimpar = styled.div`
+    width: 180px;
+    height: 35px;
+    left: 199px;
+    top: 885px;
+    margin-right: 8%;
+    border: 1px solid #666666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #666666;
+
 `
