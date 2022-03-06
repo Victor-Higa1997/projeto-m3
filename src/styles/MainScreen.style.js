@@ -351,7 +351,7 @@ export const ButtonModalAplicar = styled.div`
     left: 16px;
     top: 885px;
     background: #00C0EE;
-    margin-left: 8%;
+    margin: 0 2% 0 8%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -366,7 +366,7 @@ export const ButtonModalLimpar = styled.div`
     height: 35px;
     left: 199px;
     top: 885px;
-    margin-right: 8%;
+    margin: 0 8% 0 2%;
     border: 1px solid #666666;
     display: flex;
     align-items: center;
@@ -377,5 +377,4 @@ export const ButtonModalLimpar = styled.div`
     font-size: 14px;
     text-transform: uppercase;
     color: #666666;
-
 `

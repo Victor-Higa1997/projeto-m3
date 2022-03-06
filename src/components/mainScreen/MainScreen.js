@@ -36,7 +36,6 @@ export const TelaPrincipal = () => {
         }
     })
 
-
     const fetchPage = (array, theAmount) => {
         const page = array.slice(0, theAmount)
         return page
