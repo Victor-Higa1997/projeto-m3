@@ -7,3 +7,9 @@ Para rodar o projeto execute os seguintes comandos:
 - npm install
 - npm start
 - npx json-server --watch data/db.json --port 5000
+
+
+
+Nome: Victor Higa
+Cel: (11)97401-7926
+E-mail: viih.higa@gmail.com
